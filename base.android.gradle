@@ -1,0 +1,48 @@
+apply from: "${rootProject.rootDir}/base.gradle"
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            // Disables PNG crunching for the debug build type since by default enabled
+            crunchPngs false
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    hilt {
+        enableAggregatingTask = true
+    }
+
+    packagingOptions.resources {
+        excludes += "META-INF/LICENSE.md" //junit-ktx
+        excludes += "META-INF/LICENSE-notice.md" //junit-ktx
+        excludes += "MANIFEST.MF" //mockk-android
+    }
+
+}
+
+dependencies {
+    implementation hilt_library.nav_fragment
+    implementation hilt_library.android
+    kapt hilt_library.android_compiler
+
+    implementation android_library.core_ktx
+    implementation android_library.fragment_ktx
+    implementation android_library.material
+    implementation android_library.appcompat
+    implementation android_library.lifecycle_process
+    implementation android_library.swiperefreshlayout
+
+    implementation coil_library.coil
+
+    testImplementation test_library.core_testing
+    testImplementation test_library.livedata_test
+}

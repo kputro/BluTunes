@@ -1,0 +1,6 @@
+android.namespace "${application_id}.entity"
+
+dependencies {
+    implementation square_library.moshi_kotlin
+    kapt square_library.moshi_codegen
+}

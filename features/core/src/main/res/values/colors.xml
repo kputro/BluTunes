@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/blue_600</color>
+
+    <!-- region generated material design 3 colors   -->
+    <color name="md_theme_light_primary">@color/blue_600</color>
+    <color name="md_theme_light_onPrimary">@color/ds_white</color>
+    <color name="md_theme_light_primaryContainer">@color/blue_200</color>
+    <color name="md_theme_light_onPrimaryContainer">@color/ds_black</color>
+    <color name="md_theme_light_secondary">@color/blue_500</color>
+    <color name="md_theme_light_onSecondary">@color/blue_100</color>
+    <color name="md_theme_light_secondaryContainer">@color/blue_100</color>
+    <color name="md_theme_light_onSecondaryContainer">@color/blue_600</color>
+    <color name="md_theme_light_tertiary">@color/blue_700</color>
+    <color name="md_theme_light_onTertiary">@color/blue_100</color>
+    <color name="md_theme_light_tertiaryContainer">@color/blue_300</color>
+    <color name="md_theme_light_onTertiaryContainer">@color/ds_black</color>
+    <color name="md_theme_light_error">@color/red_600</color>
+    <color name="md_theme_light_errorContainer">@color/red_200</color>
+    <color name="md_theme_light_onError">@color/red_50</color>
+    <color name="md_theme_light_onErrorContainer">@color/ds_black</color>
+    <color name="md_theme_light_background">@color/ds_white</color>
+    <color name="md_theme_light_onBackground">@color/ds_black</color>
+    <color name="md_theme_light_surface">@color/grey_50</color>
+    <color name="md_theme_light_onSurface">@color/grey_700</color>
+    <color name="md_theme_light_surfaceVariant">@color/grey_100</color>
+    <color name="md_theme_light_onSurfaceVariant">@color/grey_600</color>
+    <color name="md_theme_light_outline">@color/grey_200</color>
+    <color name="md_theme_light_inverseOnSurface">@color/grey_50</color>
+    <color name="md_theme_light_inverseSurface">@color/grey_700</color>
+    <color name="md_theme_light_inversePrimary">@color/blue_300</color>
+    <color name="md_theme_light_shadow">@color/ds_black</color>
+    <color name="md_theme_light_surfaceTint">@color/blue_700</color>
+    <color name="md_theme_light_outlineVariant">@color/grey_300</color>
+    <color name="md_theme_light_scrim">@color/ds_black</color>
+
+    <color name="md_theme_dark_primary">@color/blue_200</color>
+    <color name="md_theme_dark_onPrimary">@color/ds_black</color>
+    <color name="md_theme_dark_primaryContainer">@color/blue_600</color>
+    <color name="md_theme_dark_onPrimaryContainer">@color/ds_white</color>
+    <color name="md_theme_dark_secondary">@color/blue_100</color>
+    <color name="md_theme_dark_onSecondary">@color/blue_600</color>
+    <color name="md_theme_dark_secondaryContainer">@color/blue_500</color>
+    <color name="md_theme_dark_onSecondaryContainer">@color/blue_100</color>
+    <color name="md_theme_dark_tertiary">@color/blue_300</color>
+    <color name="md_theme_dark_onTertiary">@color/ds_black</color>
+    <color name="md_theme_dark_tertiaryContainer">@color/blue_700</color>
+    <color name="md_theme_dark_onTertiaryContainer">@color/blue_100</color>
+    <color name="md_theme_dark_error">@color/red_200</color>
+    <color name="md_theme_dark_errorContainer">@color/red_600</color>
+    <color name="md_theme_dark_onError">@color/ds_black</color>
+    <color name="md_theme_dark_onErrorContainer">@color/red_200</color>
+    <color name="md_theme_dark_background">@color/ds_black</color>
+    <color name="md_theme_dark_onBackground">@color/ds_white</color>
+    <color name="md_theme_dark_surface">@color/grey_700</color>
+    <color name="md_theme_dark_onSurface">@color/grey_50</color>
+    <color name="md_theme_dark_surfaceVariant">@color/grey_600</color>
+    <color name="md_theme_dark_onSurfaceVariant">@color/grey_100</color>
+    <color name="md_theme_dark_outline">@color/grey_50</color>
+    <color name="md_theme_dark_inverseOnSurface">@color/grey_700</color>
+    <color name="md_theme_dark_inverseSurface">@color/grey_50</color>
+    <color name="md_theme_dark_inversePrimary">@color/blue_700</color>
+    <color name="md_theme_dark_shadow">@color/ds_black</color>
+    <color name="md_theme_dark_surfaceTint">@color/blue_200</color>
+    <color name="md_theme_dark_outlineVariant">@color/grey_100</color>
+    <color name="md_theme_dark_scrim">@color/ds_black</color>
+    <!--    endregion-->
+
+    <color name="loading_progress_background">#3A3B4145</color>
+    <color name="pulse_color_default">@color/pink_600</color>
+
+    <color name="bubble_menu_background">#9A3B4145</color>
+
+    <color name="image_preload_background">#90565456</color>
+    <color name="image_preload_background_darker">#BA3B4145</color>
+
+    <color name="bg_progress_bar_status_text_gray">#D0F3F3F3</color>
+    <color name="bg_progress_bar_status_text_blue">#D0077CB6</color>
+
+    <color name="bg_pressed_shadow">#60565456</color>
+    <color name="bg_home_account">#D0066EA2</color>
+
+    <!--region TEXT COLORS-->
+    <color name="text_color_default">@color/ds_black</color>
+    <color name="text_color_inverted">@color/ds_white</color>
+    <color name="text_color_body">@color/grey_700</color>
+    <color name="text_color_link">@color/blue_600</color>
+    <color name="text_color_subdued">@color/grey_600</color>
+    <color name="text_color_label">@color/grey_500</color>
+    <color name="text_color_disabled">@color/grey_400</color>
+    <color name="text_color_hint_disabled">@color/grey_200</color>
+    <color name="text_color_brand_primary">@color/blue_600</color>
+    <color name="text_color_brand_primary_bolder">@color/blue_700</color>
+    <color name="text_color_brand_secondary">@color/orange_600</color>
+    <color name="text_color_brand_secondary_bolder">@color/orange_700</color>
+    <color name="text_color_critical">@color/red_600</color>
+    <color name="text_color_critical_bolder">@color/red_700</color>
+    <color name="text_color_warning">@color/yellow_600</color>
+    <color name="text_color_warning_bolder">@color/yellow_700</color>
+    <color name="text_color_success">@color/green_600</color>
+    <color name="text_color_success_bolder">@color/green_700</color>
+    <color name="text_color_accent_purple">@color/purple_600</color>
+    <color name="text_color_accent_purple_bolder">@color/purple_700</color>
+    <color name="text_color_accent_pink">@color/pink_600</color>
+    <color name="text_color_accent_pink_bolder">@color/pink_700</color>
+
+    <color name="text_color_on_brand_primary">@color/blue_50</color>
+    <color name="text_color_on_brand_primary_bolder">@color/blue_100</color>
+    <color name="text_color_on_brand_secondary">@color/orange_50</color>
+    <color name="text_color_on_critical">@color/red_50</color>
+    <color name="text_color_on_warning">@color/yellow_50</color>
+    <color name="text_color_on_success">@color/green_50</color>
+    <color name="text_color_on_accent_purple">@color/purple_50</color>
+    <color name="text_color_on_accent_pink">@color/pink_50</color>
+    <!--endregion-->
+
+    <!--region LINE -->
+    <color name="line_primary">@color/grey_200</color>
+    <color name="line_primary_softer">@color/grey_50</color>
+    <color name="line_primary_bolder">@color/grey_300</color>
+    <!--endregion-->
+
+    <!--region BACKGROUND -->
+    <color name="bg_default">@color/ds_white</color>
+    <color name="bg_level1">@color/grey_50</color>
+    <color name="bg_level2">@color/grey_100</color>
+    <color name="bg_level3">@color/grey_200</color>
+    <color name="bg_inverted">@color/ds_black</color>
+
+    <color name="bg_primary">@color/blue_600</color>
+    <color name="bg_secondary">@color/blue_400</color>
+    <color name="bg_tertiary">@color/blue_200</color>
+
+    <color name="bg_primary_container">@color/blue_100</color>
+    <color name="bg_secondary_container">@color/blue_50</color>
+
+    <color name="bg_purple">@color/purple_600</color>
+    <color name="bg_accent_purple">@color/purple_50</color>
+    <!--endregion-->
+
+    <!--region STATUS-->
+    <color name="status_blue">@color/blue_50</color>
+    <color name="on_status_blue">@color/blue_600</color>
+    <color name="status_green">@color/green_50</color>
+    <color name="on_status_green">@color/green_600</color>
+    <color name="on_status_green_bolder">@color/green_700</color>
+    <color name="status_yellow">@color/yellow_50</color>
+    <color name="on_status_yellow">@color/yellow_600</color>
+    <color name="status_orange">@color/orange_50</color>
+    <color name="on_status_orange">@color/orange_700</color>
+    <color name="status_red">@color/red_50</color>
+    <color name="on_status_red">@color/red_700</color>
+    <color name="status_grey">@color/grey_50</color>
+    <color name="on_status_grey">@color/ds_black</color>
+    <color name="status_black">@color/ds_black</color>
+    <color name="on_status_black">@color/ds_white</color>
+    <color name="status_purple">@color/purple_50</color>
+    <color name="on_status_purple">@color/purple_700</color>
+    <color name="status_pink">@color/pink_50</color>
+    <color name="on_status_pink">@color/pink_700</color>
+    <!--endregion-->
+</resources>

@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "BluTunes"
+include ':app'
+
+//region library
+include ':lib-data'
+project(':lib-data').projectDir = new File("$rootDir/libraries/data")
+
+include ':lib-entity'
+project(':lib-entity').projectDir = new File("$rootDir/libraries/entity")
+//endregion
+
+//region feature
+include ':feature-core'
+project(':feature-core').projectDir = new File("$rootDir/features/core")
+
+include ':feature-musicplayer'
+project(':feature-musicplayer').projectDir = new File("$rootDir/features/musicplayer")
+//endregion

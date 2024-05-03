@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        min_sdk_version = 26
+        target_sdk_version = 34
+        hilt_version = '2.44'
+    }
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.1.1' apply false
+    id 'com.android.library' version '8.1.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+}
+
+apply from: 'deps.gradle'
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+subprojects { subs ->
+    def subsName = subs.name.split('-')[0]
+
+    if (subsName == 'app') {
+        apply plugin: 'com.android.application'
+        apply from: "$rootDir/base.android.gradle"
+        return
+    }
+
+    apply plugin: 'com.android.library'
+    if (subsName == 'feature') {
+        apply from: "$rootDir/base.android.gradle"
+    } else if (subsName == 'lib') {
+        apply from: "$rootDir/base.gradle"
+    } else throw IllegalArgumentException(
+            "Unknown feature or library type, provide prefix lib or feature on settings.gradle file"
+    )
+
+}

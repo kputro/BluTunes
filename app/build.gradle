@@ -1,0 +1,95 @@
+android {
+    namespace application_id
+    compileSdk target_sdk_version
+
+    defaultConfig {
+        applicationId application_id
+        minSdk min_sdk_version
+        targetSdk target_sdk_version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            ndk {
+                //reduce build time by limit supported ABIs on debug builds
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
+        }
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles fileTree(dir: "proguard", include: ["*.pro"]).asList().toArray()
+        }
+    }
+
+    def defaultDimension = "default"
+    flavorDimensions defaultDimension
+    productFlavors {
+        configureEach { flavor ->
+            if (flavor.name == "production") return
+
+            println "configuring flavor: ${flavor.name}"
+
+            versionCode Integer.parseInt(version_code_dev)
+            versionName String.format("%s", "${version_name}-${flavor.name}")
+
+            buildConfigField "String", "BASE_URL", String.format("\"%s\"", base_api_url_dev)
+        }
+        dev {
+            // signingConfig signingConfigs.debug
+            dimension defaultDimension
+            applicationIdSuffix ".dev"
+            resValue 'string', 'app_name', 'BluTunes Dev'
+        }
+        production {
+            // signingConfig signingConfigs.release
+            dimension defaultDimension
+
+            versionCode Integer.parseInt(version_code)
+            versionName version_name
+
+            buildConfigField "String", "BASE_URL", String.format("\"%s\"", base_api_url_production)
+
+            resValue 'string', 'app_name', 'BluTunes'
+        }
+    }
+
+    variantFilter { variant ->
+        def buildType = variant.buildType.name as String
+        def flavor = variant.flavors*.name.first() as String
+        def isReleaseFlavor = flavor == "production"
+
+        if (isReleaseFlavor && buildType != "release") {
+            setIgnore(true)
+            return
+        }
+
+        if (!isReleaseFlavor && buildType == "release") {
+            setIgnore(true)
+        }
+
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "${variant.flavorName}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation project(':lib-data')
+    implementation project(':feature-core')
+    implementation project(':feature-musicplayer')
+
+    debugImplementation chucker_library.debug
+    releaseImplementation chucker_library.release
+
+    implementation square_library.logging_interceptor
+    implementation square_library.converter_moshi
+}

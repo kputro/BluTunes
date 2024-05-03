@@ -1,0 +1,12 @@
+android.namespace "${application_id}.core"
+
+dependencies {
+    // used by error parser to parse error from API
+    implementation square_library.retrofit
+
+    // implementation project(':lib-data')
+
+    implementation square_library.moshi_kotlin
+    kapt square_library.moshi_codegen
+
+}

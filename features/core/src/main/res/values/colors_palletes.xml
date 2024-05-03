@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Palettes Ver.2 | Updated: 24/Jul/23 -->
+
+    <!--GREY-->
+    <color name="grey_50">#EEF0F1</color>
+    <color name="grey_100">#DDE1E5</color>
+    <color name="grey_200">#C6CACE</color>
+    <color name="grey_300">#B6BABD</color>
+    <color name="grey_400">#9CA1A5</color>
+    <color name="grey_500">#8B9092</color>
+    <color name="grey_600">#6E7476</color>
+    <color name="grey_700">#505658</color>
+
+    <!--BLUE-->
+    <color name="blue_50">#E6F3F9</color>
+    <color name="blue_100">#C7E5F4</color>
+    <color name="blue_200">#AAD8EF</color>
+    <color name="blue_300">#66B4DB</color>
+    <color name="blue_400">#419BC8</color>
+    <color name="blue_500">#1F88BD</color>
+    <color name="blue_600">#077CB6</color>
+    <color name="blue_700">#066EA2</color>
+
+    <!--PURPLE-->
+    <color name="purple_50">#ECEDFE</color>
+    <color name="purple_100">#DCDFFC</color>
+    <color name="purple_200">#C4C8F7</color>
+    <color name="purple_300">#9FA5F3</color>
+    <color name="purple_400">#7F87EF</color>
+    <color name="purple_500">#606AEC</color>
+    <color name="purple_600">#4B56E7</color>
+    <color name="purple_700">#434DD0</color>
+
+    <!--PINK-->
+    <color name="pink_50">#FDE9F0</color>
+    <color name="pink_100">#FEDCE8</color>
+    <color name="pink_200">#FFC7DA</color>
+    <color name="pink_300">#FFA8C6</color>
+    <color name="pink_400">#FF7EAA</color>
+    <color name="pink_500">#FC6597</color>
+    <color name="pink_600">#F94883</color>
+    <color name="pink_700">#E01F5F</color>
+
+    <!--RED-->
+    <color name="red_50">#F9E1E1</color>
+    <color name="red_100">#F6CCCC</color>
+    <color name="red_200">#F2B5B5</color>
+    <color name="red_300">#ED9696</color>
+    <color name="red_400">#E76A6A</color>
+    <color name="red_500">#E34646</color>
+    <color name="red_600">#DC1818</color>
+    <color name="red_700">#AD1F1F</color>
+
+    <!--ORANGE-->
+    <color name="orange_50">#FFF1E5</color>
+    <color name="orange_100">#FEE3CE</color>
+    <color name="orange_200">#FDCFAC</color>
+    <color name="orange_300">#FDBC8B</color>
+    <color name="orange_400">#FEA15A</color>
+    <color name="orange_500">#FE8A32</color>
+    <color name="orange_600">#FF6F00</color>
+    <color name="orange_700">#E25100</color>
+
+    <!--YELLOW-->
+    <color name="yellow_50">#FDF3DB</color>
+    <color name="yellow_100">#FDEEC5</color>
+    <color name="yellow_200">#FDE5A5</color>
+    <color name="yellow_300">#FDDE88</color>
+    <color name="yellow_400">#FED562</color>
+    <color name="yellow_500">#FFCC41</color>
+    <color name="yellow_600">#FFBB00</color>
+    <color name="yellow_700">#ED9C00</color>
+
+    <!--GREEN-->
+    <color name="green_50">#DAF0E6</color>
+    <color name="green_100">#C3E8D6</color>
+    <color name="green_200">#ABDFC5</color>
+    <color name="green_300">#88D2AE</color>
+    <color name="green_400">#56C18C</color>
+    <color name="green_500">#2DB270</color>
+    <color name="green_600">#09A557</color>
+    <color name="green_700">#078345</color>
+
+    <!--BASIC-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="ds_white">#FCFCFC</color>
+    <color name="ds_black">#3B4145</color>
+    <color name="ds_primary">@color/blue_600</color>
+    <color name="ds_secondary">@color/orange_600</color>
+    <color name="ds_critical">@color/red_600</color>
+    <color name="ds_warning">@color/yellow_600</color>
+    <color name="ds_success">@color/green_600</color>
+    <color name="ds_disabled">@color/grey_400</color>
+    <color name="ds_accent_pink">@color/pink_600</color>
+    <color name="ds_accent_purple">@color/purple_600</color>
+    <color name="ds_accent_blue">#408cb6</color>
+
+</resources>

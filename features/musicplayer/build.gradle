@@ -1,0 +1,6 @@
+android.namespace "${application_id}.musicplayer"
+
+dependencies {
+    implementation project(':feature-core')
+    implementation project(':lib-data')
+}

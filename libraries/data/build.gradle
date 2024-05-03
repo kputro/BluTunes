@@ -1,0 +1,13 @@
+android.namespace "${application_id}.data"
+
+dependencies {
+    api project(':lib-entity')
+
+    implementation android_library.core_ktx
+
+    implementation square_library.retrofit
+    implementation square_library.moshi_kotlin
+    kapt square_library.moshi_codegen
+
+    implementation coroutine_library.core
+}
