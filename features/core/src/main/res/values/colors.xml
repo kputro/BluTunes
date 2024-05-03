@@ -79,7 +79,7 @@
     <color name="bg_progress_bar_status_text_blue">#D0077CB6</color>
 
     <color name="bg_pressed_shadow">#60565456</color>
-    <color name="bg_home_account">#D0066EA2</color>
+    <color name="bg_home_header">#D0606AEC</color>
 
     <!--region TEXT COLORS-->
     <color name="text_color_default">@color/ds_black</color>

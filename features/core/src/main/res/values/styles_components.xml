@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region Typography Component -->
+    <style name="Typography.Blu.Display.Large" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_display_l</item>
+        <item name="lineHeight">@dimen/typography_line_height_display_l</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Display.Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_display_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_display_m</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Display.Small" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_display_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_display_s</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Heading.Large" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_heading_l</item>
+        <item name="lineHeight">@dimen/typography_line_height_heading_l</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Heading.Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_heading_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_heading_m</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="Typography.Blu.Heading.Small" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_heading_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_heading_s</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Large.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_l</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_l</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Large.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_l</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_l</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Large.Demi" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_l</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_l</item>
+        <item name="android:fontFamily">@font/poppins_demi</item>
+        <item name="fontFamily">@font/poppins_demi</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Medium.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_m</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Medium.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_m</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Medium.Demi" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_m</item>
+        <item name="android:fontFamily">@font/poppins_demi</item>
+        <item name="fontFamily">@font/poppins_demi</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Small.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_s</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Small.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_s</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Paragraph.Small.Demi" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_paragraph_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_paragraph_s</item>
+        <item name="android:fontFamily">@font/poppins_demi</item>
+        <item name="fontFamily">@font/poppins_demi</item>
+    </style>
+
+
+    <style name="Typography.Blu.Label.Medium.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_m</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Typography.Blu.Label.Medium.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_m</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Label.Medium.Demi" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_m</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_m</item>
+        <item name="android:fontFamily">@font/poppins_demi</item>
+        <item name="fontFamily">@font/poppins_demi</item>
+    </style>
+
+    <style name="Typography.Blu.Label.Small.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_s</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Typography.Blu.Label.Small.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_s</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Typography.Blu.Label.Small.Demi" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/typography_text_size_label_s</item>
+        <item name="lineHeight">@dimen/typography_line_height_label_s</item>
+        <item name="android:fontFamily">@font/poppins_demi</item>
+        <item name="fontFamily">@font/poppins_demi</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Component -->
+    <!-- <a href=https://www.figma.com/file/seTMqIDB7s6wZ9hOA71pf5/DS-Component?type=design&node-id=2342%3A4000&mode=design&t=NnhRtS3M4J49C1Bu-1>Button</a> -->
+    <style name="Widget.Blu.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">@dimen/radius_medium</item>
+        <item name="android:paddingStart">@dimen/padding_xlarge</item>
+        <item name="android:paddingEnd">@dimen/padding_xlarge</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/radius_medium</item>
+        <item name="android:paddingStart">@dimen/padding_xlarge</item>
+        <item name="android:paddingEnd">@dimen/padding_xlarge</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- region Button Primary -->
+    <style name="Widget.Blu.Button.Primary" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/ds_white</item>
+        <item name="backgroundTint">@color/blu_button_background_primary</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.XSmall" parent="Widget.Blu.Button.Primary">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Small" parent="Widget.Blu.Button.Primary">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Medium" parent="Widget.Blu.Button.Primary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Large" parent="Widget.Blu.Button.Primary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Secondary -->
+    <style name="Widget.Blu.Button.Secondary" parent="Widget.Blu.Button.Outlined">
+        <item name="strokeColor">@color/blu_button_text_secondary</item>
+        <item name="android:textColor">@color/blu_button_text_secondary</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.XSmall" parent="Widget.Blu.Button.Secondary">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Small" parent="Widget.Blu.Button.Secondary">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Medium" parent="Widget.Blu.Button.Secondary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Large" parent="Widget.Blu.Button.Secondary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Tertiary -->
+    <style name="Widget.Blu.Button.Tertiary" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/blu_button_text_tertiary</item>
+        <item name="backgroundTint">@color/blu_button_background_tertiary</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.XSmall" parent="Widget.Blu.Button.Tertiary">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Small" parent="Widget.Blu.Button.Tertiary">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Medium" parent="Widget.Blu.Button.Tertiary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Large" parent="Widget.Blu.Button.Tertiary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Primary: Yellow -->
+    <style name="Widget.Blu.Button.Primary.Yellow" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/ds_black</item>
+        <item name="backgroundTint">@color/blu_button_background_primary_yellow</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Yellow.XSmall" parent="Widget.Blu.Button.Primary.Yellow">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Yellow.Small" parent="Widget.Blu.Button.Primary.Yellow">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Yellow.Medium" parent="Widget.Blu.Button.Primary.Yellow">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Yellow.Large" parent="Widget.Blu.Button.Primary.Yellow">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Primary: Purple -->
+    <style name="Widget.Blu.Button.Primary.Purple" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/ds_white</item>
+        <item name="backgroundTint">@color/blu_button_background_primary_purple</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Purple.XSmall" parent="Widget.Blu.Button.Primary.Purple">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Purple.Small" parent="Widget.Blu.Button.Primary.Purple">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Purple.Medium" parent="Widget.Blu.Button.Primary.Purple">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.Purple.Large" parent="Widget.Blu.Button.Primary.Purple">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Primary: White/Pink -->
+    <style name="Widget.Blu.Button.Primary.White.Pink" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/ds_accent_pink</item>
+        <item name="backgroundTint">@color/blu_button_background_primary_white</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.White.Pink.XSmall" parent="Widget.Blu.Button.Primary.White.Pink">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.White.Pink.Small" parent="Widget.Blu.Button.Primary.White.Pink">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.White.Pink.Medium" parent="Widget.Blu.Button.Primary.White.Pink">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Primary.White.Pink.Large" parent="Widget.Blu.Button.Primary.White.Pink">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Primary : Red -->
+    <style name="Widget.Blu.Button.Red.Primary" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/ds_white</item>
+        <item name="backgroundTint">@color/blu_button_background_primary_red</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Red.Primary.XSmall" parent="Widget.Blu.Button.Red.Primary">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Red.Primary.Small" parent="Widget.Blu.Button.Red.Primary">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Red.Primary.Medium" parent="Widget.Blu.Button.Red.Primary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Red.Primary.Large" parent="Widget.Blu.Button.Red.Primary">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <!-- region Button Secondary: Purple -->
+    <style name="Widget.Blu.Button.Secondary.Purple" parent="Widget.Blu.Button.Outlined">
+        <item name="strokeColor">@color/blu_button_background_primary_purple</item>
+        <item name="android:textColor">@color/blu_button_background_primary_purple</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Purple.XSmall" parent="Widget.Blu.Button.Secondary.Purple">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Purple.Small" parent="Widget.Blu.Button.Secondary.Purple">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Purple.Medium" parent="Widget.Blu.Button.Secondary.Purple">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Purple.Large" parent="Widget.Blu.Button.Secondary.Purple">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Secondary: Pink -->
+    <style name="Widget.Blu.Button.Secondary.Pink" parent="Widget.Blu.Button.Outlined">
+        <item name="strokeColor">@color/blu_button_background_primary_pink</item>
+        <item name="android:textColor">@color/blu_button_background_primary_pink</item>
+        <item name="iconTint">@color/blu_button_background_primary_pink</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Pink.XSmall" parent="Widget.Blu.Button.Secondary.Pink">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Pink.Small" parent="Widget.Blu.Button.Secondary.Pink">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Pink.Medium" parent="Widget.Blu.Button.Secondary.Pink">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.Pink.Large" parent="Widget.Blu.Button.Secondary.Pink">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Secondary: White -->
+    <style name="Widget.Blu.Button.Secondary.White" parent="Widget.Blu.Button.Outlined">
+        <item name="strokeColor">@color/ds_white</item>
+        <item name="android:textColor">@color/ds_white</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.White.XSmall" parent="Widget.Blu.Button.Secondary.White">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.White.Small" parent="Widget.Blu.Button.Secondary.White">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.White.Medium" parent="Widget.Blu.Button.Secondary.White">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Secondary.White.Large" parent="Widget.Blu.Button.Secondary.White">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Tertiary: Red -->
+    <style name="Widget.Blu.Button.Tertiary.Red" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/blu_button_text_tertiary_red</item>
+        <item name="backgroundTint">@color/blu_button_background_tertiary_red</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Red.XSmall" parent="Widget.Blu.Button.Tertiary.Red">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Red.Small" parent="Widget.Blu.Button.Tertiary.Red">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Red.Medium" parent="Widget.Blu.Button.Tertiary.Red">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Red.Large" parent="Widget.Blu.Button.Tertiary.Red">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button Tertiary: Grey -->
+    <style name="Widget.Blu.Button.Tertiary.Grey" parent="Widget.Blu.Button">
+        <item name="android:textColor">@color/blu_button_text_tertiary_grey</item>
+        <item name="backgroundTint">@color/blu_button_background_tertiary_grey</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Grey.XSmall" parent="Widget.Blu.Button.Tertiary.Grey">
+        <item name="android:layout_height">@dimen/button_height_xs</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Label.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Grey.Small" parent="Widget.Blu.Button.Tertiary.Grey">
+        <item name="android:layout_height">@dimen/button_height_s</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Small.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Grey.Medium" parent="Widget.Blu.Button.Tertiary.Grey">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+
+    <style name="Widget.Blu.Button.Tertiary.Grey.Large" parent="Widget.Blu.Button.Tertiary.Grey">
+        <item name="android:layout_height">@dimen/button_height_m</item>
+        <item name="android:textAppearance">@style/Typography.Blu.Paragraph.Medium.Bold</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- endregion -->
+</resources>
