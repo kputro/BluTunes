@@ -1,0 +1,38 @@
+name: Build & Publish Release APK
+
+env:
+  main_project_module: app
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  Gradle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: Set current date as env variable
+        run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: setup jdk
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+      - name: make gradle executable
+        run: chmod +x ./gradlew
+      - name: run test
+        run: ./gradlew test
+      - name: build project
+        run: ./gradlew build
+      - name: build Dev APK
+        run: ./gradlew assembleDevDebug
+      - name: upload Dev APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.date_today }} - ${{ env.repository_name }} - APK(s) dev debug generated
+          path: ${{ env.main_project_module }}/build/outputs/apk/dev/debug/
+
