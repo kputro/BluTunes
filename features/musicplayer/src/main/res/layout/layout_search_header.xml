@@ -16,7 +16,7 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <include
-      android:id="@+id/view_search"
+      android:id="@+id/layout_search"
       layout="@layout/view_search" />
 
   </FrameLayout>

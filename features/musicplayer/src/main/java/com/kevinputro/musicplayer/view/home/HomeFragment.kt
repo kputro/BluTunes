@@ -2,7 +2,9 @@ package com.kevinputro.musicplayer.view.home
 
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import androidx.core.view.isVisible
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +14,8 @@ import com.kevinputro.blutunes.musicplayer.databinding.FragmentHomeBinding
 import com.kevinputro.core.base.BaseFragment
 import com.kevinputro.core.delegate.adapter.CompositeAdapter
 import com.kevinputro.core.delegate.viewBinding
+import com.kevinputro.core.extension.hideKeyboard
+import com.kevinputro.core.extension.ifNotEmpty
 import com.kevinputro.core.extension.observe
 import com.kevinputro.core.utils.EventObserver
 import com.kevinputro.musicplayer.adapter.ContentSongAdapter
@@ -58,7 +62,7 @@ internal class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
   private fun bindViewModels() {
     observe(viewModel.loading, EventObserver {
-      // Show Page Loading
+      showLoading(it)
     })
     observe(viewModel.errorLiveData, EventObserver {
       it.message?.let(::showToast)
@@ -89,6 +93,26 @@ internal class HomeFragment : BaseFragment<FragmentHomeBinding>() {
       }
       btnNext.setOnClickListener {
 
+      }
+    }
+    with(binding.searchHeader.layoutSearch) {
+      ivSearchClear.setOnClickListener {
+        etSearch.setText("")
+      }
+      etSearch.addTextChangedListener(onTextChanged = { charSeq, _, _, _ ->
+        ivSearchClear.isVisible = charSeq.toString().isNotEmpty()
+      })
+      etSearch.setOnEditorActionListener { v, actionId, _ ->
+        when (actionId) {
+          EditorInfo.IME_ACTION_SEARCH -> {
+            v.text.toString().ifNotEmpty {
+              viewModel.doSearch(it)
+            }
+            v.hideKeyboard()
+            true
+          }
+          else -> false
+        }
       }
     }
   }

@@ -1,18 +1,23 @@
 package com.kevinputro.musicplayer.view.home
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.kevinputro.core.base.BaseViewModel
 import com.kevinputro.core.delegate.adapter.DelegateAdapterItem
 import com.kevinputro.core.extension.asLiveData
 import com.kevinputro.core.utils.Event
 import com.kevinputro.core.utils.ViewModelUtils
 import com.kevinputro.musicplayer.model.ContentSong
+import com.kevinputro.musicplayer.repository.MusicPlayerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 internal class HomeViewModel @Inject constructor(
   viewModelUtils: ViewModelUtils,
+  private val musicPlayerRepository: MusicPlayerRepository,
 ) : BaseViewModel(viewModelUtils) {
 
   private val _homeContents = MutableLiveData<List<DelegateAdapterItem>>()
@@ -25,21 +30,23 @@ internal class HomeViewModel @Inject constructor(
   val trackProgress = _trackProgress.asLiveData()
 
   fun onStart() {
-    // Create song list
-    val items = ArrayList<ContentSong>()
-    for (i in 1..20) {
-      items.add(ContentSong(
-        albumImageUrl = "https://lh3.googleusercontent.com/FoVQFdW6zBi3sNA_yZJSV3VTWmi0belhhFzleuEbn27utkirstj1woXHfWmWqkNyHla37ZFbk_F6jvVV=w544-h544-l90-rj",
-        songTitle = "Don't Look Back in Anger",
-        songAlbum = "(What's The Story) Morning Glory? (Remastered)",
-        songArtist = "Oasis",
-        songYear = "1995",
-      ))
-    }
-    _homeContents.postValue(items)
+    // TODO Create Hint View
   }
 
   fun selectedSong(item: ContentSong) {
     _activeSong.postValue(Event(item))
+  }
+
+  fun doSearch(keyword: String) {
+    viewModelScope.launch(exceptionHandler) {
+      musicPlayerRepository.getMusicItems(term = keyword)
+        .onStart {
+          _loading.postValue(Event(true))
+        }
+        .collect { list ->
+          _loading.postValue(Event(false))
+          _homeContents.postValue(list.map { ContentSong.parseEntity(it) })
+        }
+    }
   }
 }
