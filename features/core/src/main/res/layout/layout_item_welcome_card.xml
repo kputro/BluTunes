@@ -29,7 +29,7 @@
     android:gravity="center"
     android:includeFontPadding="false"
     android:text="@string/welcome_title"
-    android:textColor="@color/purple_600"
+    android:textColor="@color/purple_400"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/iv_welcome" />
