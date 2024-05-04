@@ -1,5 +1,6 @@
 package com.kevinputro.core.delegate.adapter
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
 
 internal class DelegateAdapterItemDiffCallback: DiffUtil.ItemCallback<DelegateAdapterItem>() {
@@ -7,6 +8,7 @@ internal class DelegateAdapterItemDiffCallback: DiffUtil.ItemCallback<DelegateAd
   override fun areItemsTheSame(oldItem: DelegateAdapterItem, newItem: DelegateAdapterItem): Boolean =
     oldItem::class == newItem::class && oldItem.id() == newItem.id()
 
+  @SuppressLint("DiffUtilEquals")
   override fun areContentsTheSame(oldItem: DelegateAdapterItem, newItem: DelegateAdapterItem): Boolean =
     oldItem.content() == newItem.content()
 
