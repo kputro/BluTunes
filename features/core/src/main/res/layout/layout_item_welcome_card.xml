@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/iv_welcome"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="@dimen/margin_xxxlarge"
+    android:layout_marginTop="@dimen/margin_xxxlarge"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.9"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Welcome"
+    app:srcCompat="@drawable/bg_welcome_illustration" />
+
+  <TextView
+    android:id="@+id/tv_welcome"
+    style="@style/Typography.Blu.Heading.Medium"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_xxxlarge"
+    android:layout_marginTop="@dimen/margin_xxlarge"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:text="@string/welcome_title"
+    android:textColor="@color/purple_600"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/iv_welcome" />
+
+  <TextView
+    android:id="@+id/tv_hint"
+    style="@style/Typography.Blu.Paragraph.Medium.Regular"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_xxxlarge"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:text="@string/welcome_hint"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+  <TextView
+    android:id="@+id/tv_copyrights"
+    style="@style/Typography.Blu.Label.Medium.Regular"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_xxxlarge"
+    android:layout_marginTop="@dimen/margin_x10large"
+    android:layout_marginBottom="@dimen/margin_large"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:text="@string/project_owner_text"
+    android:textColor="@color/text_color_label"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_hint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

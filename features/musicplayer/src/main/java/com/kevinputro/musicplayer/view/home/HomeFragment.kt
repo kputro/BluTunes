@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kevinputro.blutunes.musicplayer.BuildConfig
 import com.kevinputro.blutunes.musicplayer.databinding.FragmentHomeBinding
+import com.kevinputro.core.adapter.WelcomeCardAdapter
 import com.kevinputro.core.base.BaseFragment
 import com.kevinputro.core.delegate.adapter.CompositeAdapter
 import com.kevinputro.core.delegate.viewBinding
@@ -47,6 +48,7 @@ internal class HomeFragment : BaseFragment<FragmentHomeBinding>() {
       .add(ContentSongAdapter {
         viewModel.selectedSong(it)
       })
+      .add(WelcomeCardAdapter())
       .build()
   }
 

@@ -6,6 +6,7 @@ import com.kevinputro.core.base.BaseViewModel
 import com.kevinputro.core.delegate.adapter.DelegateAdapterItem
 import com.kevinputro.core.extension.asLiveData
 import com.kevinputro.core.extension.logDebug
+import com.kevinputro.core.model.WelcomeCard
 import com.kevinputro.core.utils.Event
 import com.kevinputro.core.utils.ViewModelUtils
 import com.kevinputro.entity.response.SongResponse
@@ -36,7 +37,7 @@ internal class HomeViewModel @Inject constructor(
   val trackProgress = _trackProgress.asLiveData()
 
   fun onStart() {
-    // TODO Create Hint View
+    _homeContents.postValue(Event(listOf(WelcomeCard())))
   }
 
   fun selectedSong(item: ContentSong) {

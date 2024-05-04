@@ -3,4 +3,7 @@
     <string name="unknown_error">An unknown error occurred, please try again later…</string>
 
     <string name="search">Search</string>
+    <string name="welcome_title">Welcome to BluTunes</string>
+    <string name="welcome_hint">Type Song Title, Artist Name, or Album Name to find your song.</string>
+    <string name="project_owner_text">BluTunes by Kevin Putro.</string>
 </resources>

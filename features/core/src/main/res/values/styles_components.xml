@@ -513,10 +513,18 @@
         <item name="cornerSize">20%</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.App.Welcome" parent="">
+        <item name="cornerSize">@dimen/radius_medium</item>
+    </style>
+
     <style name="TrackSeekBar" parent="Widget.AppCompat.SeekBar">
         <item name="android:progressBackgroundTint">@color/grey_600</item>
         <item name="android:progressTint">@color/purple_400</item>
         <item name="android:thumbTint">@color/purple_600</item>
         <item name="android:paddingLeft">@dimen/margin_medium</item>
+        <item name="android:paddingRight">@dimen/margin_medium</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+        <item name="android:paddingHorizontal">@dimen/margin_medium</item>
     </style>
 </resources>
