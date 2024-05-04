@@ -33,6 +33,6 @@ jobs:
       - name: upload Dev APK
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.date_today }} - ${{ env.repository_name }} - APK(s) dev debug generated
+          name: ${{ env.date_today }} - BluTunes Dev Debug
           path: ${{ env.main_project_module }}/build/outputs/apk/dev/debug/
 
