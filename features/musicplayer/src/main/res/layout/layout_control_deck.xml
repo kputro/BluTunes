@@ -5,7 +5,9 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:background="@color/bg_blur_control_deck">
+  android:background="@color/bg_blur_control_deck"
+  android:clickable="true"
+  android:focusable="true">
 
   <com.kevinputro.core.components.CoilImageView
     android:id="@+id/iv_album"
@@ -24,11 +26,12 @@
     style="@style/Typography.Blu.Label.Small.Regular"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/margin_large"
+    android:layout_marginHorizontal="@dimen/margin_large"
     android:ellipsize="end"
     android:includeFontPadding="false"
     android:lines="1"
     app:layout_constraintBottom_toTopOf="@+id/tv_song_title"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/iv_album"
     app:layout_constraintTop_toTopOf="@+id/iv_album"
     app:layout_constraintVertical_chainStyle="packed"
@@ -43,33 +46,33 @@
     android:includeFontPadding="false"
     android:lines="1"
     app:layout_constraintBottom_toBottomOf="@+id/iv_album"
+    app:layout_constraintEnd_toEndOf="@+id/tv_song_information"
     app:layout_constraintStart_toStartOf="@+id/tv_song_information"
     app:layout_constraintTop_toBottomOf="@+id/tv_song_information"
     tools:text="Don't Look Back in Anger" />
 
-  <com.google.android.material.progressindicator.LinearProgressIndicator
-    android:id="@+id/track_indicator"
+  <SeekBar
+    android:id="@+id/seek_bar"
+    style="@style/TrackSeekBar"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/margin_large"
     android:progress="0"
-    app:trackColor="@color/bg_blur_control_deck"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/iv_album"
-    app:trackThickness="@dimen/line_height_medium"
     tools:progress="20" />
 
   <androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/margin_medium"
     android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_medium"
     android:orientation="horizontal"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/track_indicator">
+    app:layout_constraintTop_toBottomOf="@+id/seek_bar">
 
     <androidx.appcompat.widget.AppCompatImageView
       android:id="@+id/btn_previous"

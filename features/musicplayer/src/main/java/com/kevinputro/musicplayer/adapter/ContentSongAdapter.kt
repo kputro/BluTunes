@@ -2,6 +2,7 @@ package com.kevinputro.musicplayer.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import com.kevinputro.blutunes.core.R as CR
 import com.kevinputro.blutunes.musicplayer.databinding.LayoutItemSongBinding
 import com.kevinputro.core.base.DelegateBaseViewHolder
@@ -40,12 +41,9 @@ internal class ContentSongAdapter(
         tvSongTitle.text = data.songTitle
         tvSongArtist.text = data.songArtist
         tvSongAlbum.text = data.songAlbum.plus(" • ").plus(data.songYear)
-        ivSongControl.setImageResource(
-          when (data.isPlaying) {
-            true -> CR.drawable.ic_control_pause
-            else -> CR.drawable.ic_control_play
-          }
-        )
+
+        ivSongControl.isVisible = data.isPlaying
+
         buttonAction.setOnClickListener {
           onClick?.invoke(data)
         }

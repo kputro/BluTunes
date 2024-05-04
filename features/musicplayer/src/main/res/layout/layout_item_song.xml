@@ -74,13 +74,14 @@
       android:id="@+id/iv_song_control"
       android:layout_width="@dimen/icon_size_l"
       android:layout_height="@dimen/icon_size_l"
-      android:clickable="true"
-      android:focusable="true"
       android:scaleType="centerInside"
+      android:visibility="gone"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:src="@drawable/ic_control_play" />
+      app:srcCompat="@drawable/ic_music"
+      app:tint="@color/text_color_brand_primary"
+      tools:visibility="visible" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

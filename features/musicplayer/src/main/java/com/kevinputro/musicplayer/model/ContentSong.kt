@@ -13,31 +13,33 @@ internal data class ContentSong(
   val songArtist: String,
   val songAlbum: String,
   val songYear: String,
-  val itemId: String = UUID.randomUUID().toString(),
-  val isPlaying: Boolean = false,
+  val streamUrl: String,
+  val itemId: String,
+  var isPlaying: Boolean = false,
   val source: SongResponse? = null,
 ) : DelegateAdapterItem {
 
   override fun id() = itemId
 
   override fun toString() =
-    "ContentSong[title=$songTitle, artist=$songArtist, album=$songAlbum, year=$songYear, albumImageUrl=$albumImageUrl, itemId=$itemId, isPlaying=$isPlaying]"
+    "ContentSong[title=$songTitle, artist=$songArtist, album=$songAlbum, year=$songYear, streamUrl=$streamUrl, albumImageUrl=$albumImageUrl, itemId=$itemId, isPlaying=$isPlaying]"
 
   override fun content() = toString()
 
   override fun equals(other: DelegateAdapterItem) = other is ContentSong &&
-      other.content() == content()
+      other.content() == content() && other.isPlaying == isPlaying
 
   companion object {
-    fun parseEntity(response: SongResponse): ContentSong = ContentSong(
-      albumImageUrl = response.artworkUrl30.orEmpty()
-        .ifEmpty { response.artworkUrl60.orEmpty().ifEmpty { response.artworkUrl100.orEmpty() } },
+    fun parseEntity(response: SongResponse, active: Boolean = false): ContentSong = ContentSong(
+      albumImageUrl = response.artworkUrl100.orEmpty(),
       songTitle = response.trackName.orEmpty(),
       songArtist = response.artistName.orEmpty(),
       songAlbum = response.collectionName.orEmpty(),
+      streamUrl = response.previewUrl.orEmpty(),
       songYear = response.releaseDate.orEmpty()
         .reformatStringDate(targetFormat = Constant.FORMAT_YEAR_ONLY),
-      itemId = response.trackId?.toString() ?: UUID.randomUUID().toString(),
+      itemId = response.trackId.toString(),
+      isPlaying = active,
       source = response,
     )
   }

@@ -512,5 +512,11 @@
     <style name="ShapeAppearanceOverlay.App.CornerAlbumSmall" parent="">
         <item name="cornerSize">20%</item>
     </style>
-    <!-- endregion -->
+
+    <style name="TrackSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/grey_600</item>
+        <item name="android:progressTint">@color/purple_400</item>
+        <item name="android:thumbTint">@color/purple_600</item>
+        <item name="android:paddingLeft">@dimen/margin_medium</item>
+    </style>
 </resources>
