@@ -509,5 +509,8 @@
     </style>
     <!-- endregion -->
 
+    <style name="ShapeAppearanceOverlay.App.CornerAlbumSmall" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
     <!-- endregion -->
 </resources>

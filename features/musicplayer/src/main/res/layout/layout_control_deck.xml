@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/iv_album"
+    android:layout_width="@dimen/image_album_size_small"
+    android:layout_height="@dimen/image_album_size_small"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_large"
+    android:background="@drawable/bg_album_placeholder"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerAlbumSmall" />
+
+  <TextView
+    android:id="@+id/tv_song_information"
+    style="@style/Typography.Blu.Label.Small.Regular"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_large"
+    android:ellipsize="end"
+    android:includeFontPadding="false"
+    android:lines="1"
+    app:layout_constraintBottom_toTopOf="@+id/tv_song_title"
+    app:layout_constraintStart_toEndOf="@+id/iv_album"
+    app:layout_constraintTop_toTopOf="@+id/iv_album"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:text="Oasis • (What's The Story) Morning Glory? • 1995" />
+
+  <TextView
+    android:id="@+id/tv_song_title"
+    style="@style/Typography.Blu.Paragraph.Small.Demi"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:includeFontPadding="false"
+    android:lines="1"
+    app:layout_constraintBottom_toBottomOf="@+id/iv_album"
+    app:layout_constraintStart_toStartOf="@+id/tv_song_information"
+    app:layout_constraintTop_toBottomOf="@+id/tv_song_information"
+    tools:text="Don't Look Back in Anger" />
+
+  <com.google.android.material.progressindicator.LinearProgressIndicator
+    android:id="@+id/track_indicator"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_large"
+    android:progress="0"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/iv_album"
+    app:trackThickness="@dimen/line_height_medium"
+    tools:progress="20" />
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_small"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/track_indicator">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btn_previous"
+      android:layout_width="@dimen/button_height_s"
+      android:layout_height="@dimen/button_height_s"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="centerInside"
+      app:srcCompat="@drawable/ic_control_skip_previous"
+      app:tint="@color/text_color_label" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btn_play"
+      android:layout_width="@dimen/button_height_s"
+      android:layout_height="@dimen/button_height_s"
+      android:layout_marginHorizontal="@dimen/margin_small"
+      android:background="@drawable/bg_control_circle"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="centerInside"
+      app:srcCompat="@drawable/ic_control_play"
+      app:tint="@color/text_color_inverted" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btn_next"
+      android:layout_width="@dimen/button_height_s"
+      android:layout_height="@dimen/button_height_s"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="centerInside"
+      app:srcCompat="@drawable/ic_control_skip_next"
+      app:tint="@color/text_color_label" />
+
+
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

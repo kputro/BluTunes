@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_xlarge"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:background="@drawable/bg_item_outlined_r_med">
+
+    <com.google.android.material.imageview.ShapeableImageView
+      android:id="@+id/iv_album"
+      android:layout_width="@dimen/image_album_size_medium"
+      android:layout_height="@dimen/image_album_size_medium"
+      android:layout_marginVertical="@dimen/margin_medium"
+      android:background="@drawable/bg_album_placeholder"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerAlbumSmall" />
+
+    <TextView
+      android:id="@+id/tv_song_title"
+      style="@style/Typography.Blu.Paragraph.Medium.Demi"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/margin_large"
+      android:layout_marginTop="@dimen/margin_small"
+      android:ellipsize="end"
+      android:includeFontPadding="false"
+      android:lines="1"
+      app:layout_constraintBottom_toTopOf="@+id/tv_song_artist"
+      app:layout_constraintEnd_toStartOf="@+id/iv_song_control"
+      app:layout_constraintStart_toEndOf="@+id/iv_album"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Don't Look Back in Anger" />
+
+    <TextView
+      android:id="@+id/tv_song_artist"
+      style="@style/Typography.Blu.Paragraph.Medium.Regular"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:includeFontPadding="false"
+      android:lines="1"
+      app:layout_constraintBottom_toTopOf="@+id/tv_song_album"
+      app:layout_constraintEnd_toEndOf="@+id/tv_song_title"
+      app:layout_constraintStart_toStartOf="@+id/tv_song_title"
+      app:layout_constraintTop_toBottomOf="@+id/tv_song_title"
+      tools:text="Oasis" />
+
+    <TextView
+      android:id="@+id/tv_song_album"
+      style="@style/Typography.Blu.Label.Medium.Regular"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/margin_small"
+      android:ellipsize="end"
+      android:includeFontPadding="false"
+      android:lines="1"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/tv_song_title"
+      app:layout_constraintStart_toStartOf="@+id/tv_song_title"
+      app:layout_constraintTop_toBottomOf="@+id/tv_song_artist"
+      tools:text="(What's The Story) Morning Glory?" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/iv_song_control"
+      android:layout_width="@dimen/icon_size_l"
+      android:layout_height="@dimen/icon_size_l"
+      android:clickable="true"
+      android:focusable="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@drawable/ic_control_play" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/line_height_tiny"
+    android:layout_gravity="bottom"
+    android:layout_marginHorizontal="@dimen/margin_medium"
+    android:background="@color/line_primary_softer" />
+
+</FrameLayout>

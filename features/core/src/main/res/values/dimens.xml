@@ -116,4 +116,8 @@
     <dimen name="elevation_default">2dp</dimen>
     <dimen name="elevation_bolder">4dp</dimen>
 
+    <!-- Components -->
+    <dimen name="image_album_size_small">44dp</dimen>
+    <dimen name="image_album_size_medium">66dp</dimen>
+
 </resources>
