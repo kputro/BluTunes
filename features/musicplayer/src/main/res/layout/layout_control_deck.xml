@@ -4,9 +4,10 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content">
+  android:layout_height="wrap_content"
+  android:background="@color/bg_blur_control_deck">
 
-  <com.google.android.material.imageview.ShapeableImageView
+  <com.kevinputro.core.components.CoilImageView
     android:id="@+id/iv_album"
     android:layout_width="@dimen/image_album_size_small"
     android:layout_height="@dimen/image_album_size_small"
@@ -52,6 +53,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/margin_large"
     android:progress="0"
+    app:trackColor="@color/bg_blur_control_deck"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/iv_album"

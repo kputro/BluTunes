@@ -7,6 +7,18 @@
   android:layout_height="match_parent"
   android:background="@color/bg_default">
 
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_content"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:clipToPadding="false"
+    android:paddingTop="?actionBarSize"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:listitem="@layout/layout_item_song" />
+
   <FrameLayout
     android:id="@+id/home_header"
     android:layout_width="0dp"
@@ -21,23 +33,11 @@
 
   </FrameLayout>
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rv_content"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:clipToPadding="false"
-    android:paddingTop="?actionBarSize"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:listitem="@layout/layout_item_song" />
-
   <FrameLayout
+    android:id="@+id/home_control_deck"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:background="@color/bg_default"
-    tools:background="@color/bg_level1"
+    android:visibility="gone"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent">

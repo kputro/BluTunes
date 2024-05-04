@@ -79,7 +79,6 @@
     <color name="bg_progress_bar_status_text_blue">#D0077CB6</color>
 
     <color name="bg_pressed_shadow">#60565456</color>
-    <color name="bg_page_header">@color/purple_100</color>
 
     <!--region TEXT COLORS-->
     <color name="text_color_default">@color/ds_black</color>
@@ -128,6 +127,9 @@
     <color name="bg_level2">@color/grey_100</color>
     <color name="bg_level3">@color/grey_200</color>
     <color name="bg_inverted">@color/ds_black</color>
+
+    <color name="bg_blur_page_header">#A0DCDFFC</color>
+    <color name="bg_blur_control_deck">#A0ECEDFE</color>
 
     <color name="bg_primary">@color/blue_600</color>
     <color name="bg_secondary">@color/blue_400</color>

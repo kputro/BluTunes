@@ -64,4 +64,8 @@ ext {
     coil_library = [
             coil: "io.coil-kt:coil:$coil_version"
     ]
+
+    view_library = [
+            frosty: "com.github.HardcodedCat:RealtimeBlurView_v2:1.3.2"
+    ]
 }

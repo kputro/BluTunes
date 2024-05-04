@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners
-        android:bottomLeftRadius="@dimen/radius_medium"
-        android:bottomRightRadius="@dimen/radius_medium" />
-    <solid android:color="@color/bg_page_header" />
-</shape>

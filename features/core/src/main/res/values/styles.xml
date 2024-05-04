@@ -11,7 +11,8 @@
         <item name="colorSecondaryVariant">@color/blue_700</item>
         <item name="colorOnSecondary">@color/ds_black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/blue_50</item>
+        <item name="android:statusBarColor">@color/bg_blur_page_header</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
         <item name="android:colorBackground">@android:color/white</item>
 
