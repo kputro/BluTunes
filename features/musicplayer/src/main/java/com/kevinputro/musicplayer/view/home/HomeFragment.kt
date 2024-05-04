@@ -4,6 +4,7 @@ import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.SeekBar
@@ -41,7 +42,7 @@ internal class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
   private var mediaPlayer: MediaPlayer? = null
 
-  private val trackHandler: Handler = Handler()
+  private val trackHandler: Handler = Handler(Looper.getMainLooper())
 
   private val contentAdapter by lazy {
     CompositeAdapter.Builder()
