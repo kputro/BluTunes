@@ -12,8 +12,6 @@ data class SongResponse(
   @Json(name = "collectionName") val collectionName: String?,
   @Json(name = "trackName") val trackName: String?,
   @Json(name = "previewUrl") val previewUrl: String?,
-  @Json(name = "artworkUrl30") val artworkUrl30: String?,
-  @Json(name = "artworkUrl60") val artworkUrl60: String?,
   @Json(name = "artworkUrl100") val artworkUrl100: String?,
   @Json(name = "releaseDate") val releaseDate: String?,
   @Json(name = "primaryGenreName") val primaryGenreName: String?,

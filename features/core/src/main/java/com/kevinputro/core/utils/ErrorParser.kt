@@ -28,11 +28,11 @@ interface ErrorParser {
 
 }
 
-internal class ErrorParserImpl @Inject constructor(
+class ErrorParserImpl @Inject constructor(
   @ApplicationContext context: Context
 ) : ErrorParser {
 
-  override val commonMessage: String = context.resources.getString(R.string.unknown_error)
+  override val commonMessage: String = "An unknown error occurred, please try again later…"
 
   override fun parseError(throwable: Throwable): ErrorModel = when (throwable) {
     is HttpException -> parseRetrofitHttpException(throwable)

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
-internal class MusicPlayerRepositoryImpl @Inject constructor(
+class MusicPlayerRepositoryImpl @Inject constructor(
   private val dispatcher: DispatcherProvider,
   private val coreService: CoreService,
 ) : MusicPlayerRepository {

@@ -29,6 +29,18 @@ android {
 
 }
 
+tasks.withType(Test) {
+    useJUnitPlatform()
+    testLogging {
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+        showExceptions true
+    }
+    ignoreFailures = false
+    //https://docs.gradle.org/4.6/release-notes.html#fail-fast-option-for-test-tasks
+    failFast = true
+}
+
 dependencies {
     implementation hilt_library.nav_fragment
     implementation hilt_library.android
@@ -45,4 +57,7 @@ dependencies {
 
     testImplementation test_library.core_testing
     testImplementation test_library.livedata_test
+    testImplementation test_library.junit5
+    testImplementation test_library.mockk
+    testImplementation test_library.coroutine
 }
