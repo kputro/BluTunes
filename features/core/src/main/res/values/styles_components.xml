@@ -514,7 +514,7 @@
     </style>
 
     <style name="ShapeAppearanceOverlay.App.Welcome" parent="">
-        <item name="cornerSize">@dimen/radius_medium</item>
+        <item name="cornerSize">@dimen/radius_xxlarge</item>
     </style>
 
     <style name="TrackSeekBar" parent="Widget.AppCompat.SeekBar">

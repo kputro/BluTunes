@@ -17,7 +17,7 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintWidth_percent="0.9"
     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Welcome"
-    app:srcCompat="@drawable/bg_welcome_illustration" />
+    app:srcCompat="@drawable/bg_welcome_logo" />
 
   <TextView
     android:id="@+id/tv_welcome"
