@@ -28,11 +28,65 @@ interface ErrorParser {
 
 }
 
-class ErrorParserImpl @Inject constructor(
+internal class ErrorParserImpl @Inject constructor(
   @ApplicationContext context: Context
 ) : ErrorParser {
 
-  override val commonMessage: String = "An unknown error occurred, please try again later…"
+  override val commonMessage: String = context.resources.getString(R.string.unknown_error)
+
+  override fun parseError(throwable: Throwable): ErrorModel = when (throwable) {
+    is HttpException -> parseRetrofitHttpException(throwable)
+    else -> ErrorModel.parseError(commonMessage)
+  }
+
+  private fun parseRetrofitHttpException(httpException: HttpException): ErrorModel {
+
+    val jsonObject: JSONObject? = try {
+      httpException.response()?.errorBody()?.bytes()?.let {
+        String(it)
+      }?.let { json -> JSONObject(json) }
+    } catch (e: JSONException) {
+      null
+    } catch (e: IndexOutOfBoundsException) {
+      null
+    } catch (e: IOException) {
+      null
+    }
+
+    val model: ErrorModel = jsonObject?.let {
+      return@let try {
+        ErrorModel.parseError(
+          message = it.getString(KEY_MESSAGE),
+          code = httpException.code(),
+          cause = httpException
+        )
+      } catch (e: IOException) {
+        null
+      } catch (e: NullPointerException) {
+        null
+      } catch (e: IndexOutOfBoundsException) {
+        null
+      } catch (e: EOFException) {
+        null
+      } catch (e: IllegalArgumentException) {
+        null
+      } catch (e: JSONException) {
+        null
+      }
+    } ?: ErrorModel.parseError(commonMessage)
+
+    return model
+  }
+
+  private companion object {
+    const val KEY_MESSAGE = "error_message"
+  }
+
+}
+
+class TestErrorParserImpl : ErrorParser {
+
+  override val commonMessage: String = "Error"
 
   override fun parseError(throwable: Throwable): ErrorModel = when (throwable) {
     is HttpException -> parseRetrofitHttpException(throwable)

@@ -1,9 +1,7 @@
 package com.kevinputro.musicplayer.viewModel
 
-import android.content.Context
-import com.kevinputro.blutunes.core.R
 import com.kevinputro.core.utils.DispatcherProvider
-import com.kevinputro.core.utils.ErrorParserImpl
+import com.kevinputro.core.utils.TestErrorParserImpl
 import com.kevinputro.core.utils.ViewModelUtils
 import com.kevinputro.entity.response.SongResponse
 import com.kevinputro.musicplayer.dummy.MusicPlayerDummy
@@ -12,11 +10,9 @@ import com.kevinputro.musicplayer.view.home.HomeViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -28,9 +24,6 @@ class HomeViewModelTest {
 
   @Mock
   private lateinit var mockMusicPlayerRepository: MusicPlayerRepository
-
-  @Mock
-  private lateinit var mockApplicationContext: Context
 
   private lateinit var homeViewModel: HomeViewModel
 
@@ -45,7 +38,7 @@ class HomeViewModelTest {
   fun setup() {
     MockitoAnnotations.initMocks(this)
     homeViewModel = HomeViewModel(
-      ViewModelUtils(dispatcherProvider, ErrorParserImpl(mockApplicationContext)),
+      ViewModelUtils(dispatcherProvider, TestErrorParserImpl()),
       mockMusicPlayerRepository,
     )
   }
